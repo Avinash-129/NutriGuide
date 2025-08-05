@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from openai import OpenAI
 import os
 
-GEMINI_API_KEY = "AIzaSyDpUuDXCE_iKcn7rleBwUlt9uVfFPJUu5k"
+GEMINI_API_KEY = "ENTER_YOUR_GEMINI_KEY_HERE"
 
 client = OpenAI(
     api_key=GEMINI_API_KEY,
@@ -51,4 +51,5 @@ def chat():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
+
     app.run(host="0.0.0.0", port=port)
